@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 using namespace std;
-
 constexpr int initcap = 5;
 template <typename T>
 class SqList
@@ -10,13 +9,11 @@ public:
     T* data;
     int capacity;
     int length;
-
     SqList() {
         data = new T[initcap];
         capacity = initcap;
         length = 0;
     }
-
     SqList(const SqList<T>& s) {
         capacity = s.capacity;
         length = s.length;
@@ -25,12 +22,10 @@ public:
             data[i] = s.data[i];
         }
     }
-
     ~SqList() {
         delete[] data;
         data = nullptr;
     }
-
     void recap(int newcap) {
         if (newcap <= 0) {
             return;
@@ -43,7 +38,6 @@ public:
         }
         delete[] olddata;
     }
-
     void CreateList(T a[], int n) {
         length = 0;
         for (int i = 0; i < n; i++) {
@@ -54,7 +48,6 @@ public:
             length++;
         }
     }
-
     void Add(T e) {
         if (length == capacity) {
             recap(2 * length);
@@ -62,11 +55,9 @@ public:
         data[length] = e;
         length++;
     }
-
     int GetLength() {
         return length;
     }
-
     bool GetElem(int i, T& e) {
         if (i < 0 || i >= length) {
             return false;
@@ -74,7 +65,6 @@ public:
         e = data[i];
         return true;
     }
-
     bool SetElem(int i, T e) {
         if (i < 0 || i >= length) {
             return false;
@@ -82,7 +72,6 @@ public:
         data[i] = e;
         return true;
     }
-
     int GetNo(T e) {
         int i = 0;
         while (i < length&& data[i] != e) {
@@ -93,7 +82,6 @@ public:
         }
         return i;
     }
-
     bool Insert(int i, T e) {
         if (i<0 || i>length) {
             return false;
@@ -108,7 +96,6 @@ public:
         length++;
         return true;
     }
-
     bool Delete(int i) {
         if (i < 0 || i > length) {
             return false;
@@ -122,7 +109,6 @@ public:
         }
         return true;
     }
-
     void DispList() {
         for (int i = 0; i < length; i++) {
             cout << data[i] << " ";

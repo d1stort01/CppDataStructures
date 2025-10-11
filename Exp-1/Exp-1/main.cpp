@@ -2,7 +2,6 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-
 // 第七题
 void differenceSqList(SqList<int>& A, SqList<int>& B, SqList<int>& C) {
     if (C.length != 0) {
@@ -22,7 +21,6 @@ void differenceSqList(SqList<int>& A, SqList<int>& B, SqList<int>& C) {
         }
     }
 }
-
 void differenceVector(vector<int>& A, vector<int>& B, vector<int>& C) {
     C = A;
     for (int i = 0; i < B.size(); i++) {
@@ -32,7 +30,6 @@ void differenceVector(vector<int>& A, vector<int>& B, vector<int>& C) {
         }
     }
 }
-
 // 第八题
 void intersectionSqList(SqList<int>& A, SqList<int>& B, SqList<int>& C) {
     if (C.length != 0) {
@@ -46,7 +43,6 @@ void intersectionSqList(SqList<int>& A, SqList<int>& B, SqList<int>& C) {
         }
     }
 }
-
 void intersectionVector(vector<int>& A, vector<int>& B, vector<int>& C) {
     C.clear();
     for (int i = 0; i < A.size(); i++) {
@@ -55,7 +51,6 @@ void intersectionVector(vector<int>& A, vector<int>& B, vector<int>& C) {
         }
     }
 }
-
 void Disp(vector<int>& myv)		       //输出vector的元素
 {
     vector<int>::iterator it;
@@ -63,7 +58,6 @@ void Disp(vector<int>& myv)		       //输出vector的元素
         cout << *it << " ";
     cout << endl;
 }
-
 int main()
 {
     int a1[] = { 1, 3, 5, 7 };
@@ -121,6 +115,3 @@ int main()
 
     return 0;
 }
-
-
-
